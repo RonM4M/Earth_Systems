@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geosphere Issues</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') center/cover no-repeat;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        header {
+            background: rgba(0, 26, 46, 0.8);
+            padding: 1rem;
+            text-align: center;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Introduction Section */
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 60vh;
+        }
+
+        .intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s forwards;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        .explore-btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background: #007acc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeInUp 1s forwards;
+            animation-delay: 1s;
+        }
+
+        .explore-btn:hover {
+            background: #005f99;
+            transform: scale(1.05);
+        }
+
+        /* Geosphere Issues Section */
+        .issues {
+            margin-top: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        .learn-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #00aaff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .learn-more:hover {
+            background-color: #007acc;
+            transform: scale(1.05);
+        }
+
+        /* Human Impact Section */
+        .human-impact {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px 20px;
+            background: rgba(0, 26, 46, 0.8);
+            border-radius: 10px;
+        }
+
+        .human-impact h2 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .human-impact img {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: rgba(28, 28, 48, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr; /* Stack cards on smaller screens */
+            }
+
+            .human-impact {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Geosphere Issues</h1>
+        <nav>
+            <ul>
+                <li><a href="#issues">Issues</a></li>
+                <li><a href="#human-impact">Human Impact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>Challenges Facing the Geosphere</h2>
+            <p>Human activities and natural processes are causing significant changes to the Earth's solid layers, leading to various environmental challenges.</p>
+            <button class="explore-btn" onclick="document.getElementById('issues').scrollIntoView({ behavior: 'smooth' });">Explore the Issues</button>
+        </section>
+
+        <!-- Geosphere Issues Section -->
+        <section id="issues" class="issues">
+            <h2>Key Issues</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-tractor"></i>
+                    <h3>Deforestation</h3>
+                    <p>Large-scale removal of trees impacts soil stability, leading to erosion and loss of nutrients in the geosphere.</p>
+                    <a href="defor.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-industry"></i>
+                    <h3>Mining</h3>
+                    <p>Mining activities strip the land of its top layers, damaging ecosystems and causing long-term soil degradation.</p>
+                    <a href="mining.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-city"></i>
+                    <h3>Urbanization</h3>
+                    <p>Expansion of cities disturbs natural landscapes, leading to soil compaction, erosion, and loss of fertile land.</p>
+                    <a href="urban.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Human Impact Section -->
+        <section id="human-impact" class="human-impact">
+            <h2>Human Impact on the Geosphere</h2>
+            <p>The ongoing strain on the geosphere from human activities is disrupting natural processes and accelerating issues like erosion and habitat loss.</p>
+            <img src="https://i0.wp.com/www.australiancurriculumlessons.com.au/wp-content/uploads/2017/04/The-Rock-Cycle-Image.png?ssl=1" alt="Geological Processes Diagram" alt="Human Impact on Geosphere">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Geosphere Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

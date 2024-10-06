@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hydrosphere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: url('https://t4.ftcdn.net/jpg/06/44/07/71/360_F_644077177_3L0CSnMXPSxZh7fvI03hBnimRe0l7COr.jpg') center/cover no-repeat;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        header {
+            background: rgba(0, 26, 46, 0.8);
+            padding: 1rem;
+            text-align: center;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 0.5rem;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00aaff;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Introduction Section */
+        .intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 60vh;
+        }
+
+        .intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s forwards;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        .explore-btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background: #007acc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeInUp 1s forwards;
+            animation-delay: 1s;
+        }
+
+        .explore-btn:hover {
+            background: #005f99;
+            transform: scale(1.05);
+        }
+
+        /* Hydrosphere Issues Section */
+        .features {
+            margin-top: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        .learn-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #00aaff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .learn-more:hover {
+            background-color: #007acc;
+            transform: scale(1.05);
+        }
+
+        /* Water Cycle Section */
+        .water-cycle {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px 20px;
+            background: rgba(0, 26, 46, 0.8);
+            border-radius: 10px;
+        }
+
+        .water-cycle h2 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .water-cycle img {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: rgba(28, 28, 48, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr; /* Stack cards on smaller screens */
+            }
+
+            .water-cycle {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Hydrosphere</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">Issues</a></li>
+                <li><a href="#water-cycle">Water Cycle</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro">
+            <h2>The Earth's Water System</h2>
+            <p>Explore the critical issues facing our water systems and understand their impact on the environment and life on Earth.</p>
+            <button class="explore-btn" onclick="document.getElementById('features').scrollIntoView({ behavior: 'smooth' });">Explore Hydrosphere Issues</button>
+        </section>
+
+        <!-- Hydrosphere Issues Section -->
+        <section id="features" class="features">
+            <h2>Hydrosphere Issues</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-water"></i>
+                    <h3>Water Pollution</h3>
+                    <p>Contaminants from industrial and agricultural sources threaten water quality, affecting ecosystems and human health.</p>
+                    <a href="waterp.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Climate Change</h3>
+                    <p>Changing weather patterns impact precipitation and water availability, leading to droughts and flooding.</p>
+                    <a href="climatec.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-flag"></i>
+                    <h3>Water Conservation</h3>
+                    <p>Efforts to conserve water are critical in ensuring sustainable use of our water resources for future generations.</p>
+                    <a href="waterc.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Water Cycle Section -->
+        <section id="water-cycle" class="water-cycle">
+            <h2>The Water Cycle</h2>
+            <p>The continuous movement of water on, above, and below the surface of the Earth.</p>
+            <img src="https://gpm.nasa.gov/education/sites/default/files/article_images/Water-Cycle-Art2A.png" alt="Water Cycle Diagram">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hydrosphere Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

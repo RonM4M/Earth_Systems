@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acid Rain: Effects on Earth's Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background: url('https://c.pxhere.com/photos/c2/4b/blue_sky_clouds_flying_HD_wallpaper_over_the_clouds_sky-911793.jpg!d') center/cover no-repeat;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        header {
+            background: rgba(0, 26, 46, 0.9);
+            padding: 1.5rem;
+            text-align: center;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            z-index: 10;
+            animation: bounce 1s infinite;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        section {
+            margin-top: 40px;
+            background: rgba(0, 26, 46, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+            transition: transform 0.2s;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: slideIn 0.5s forwards;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        section .impact {
+            margin-top: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        section .impact:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        section .connection {
+            margin-top: 10px;
+            font-style: italic;
+            color: #aaa;
+        }
+
+        footer {
+            background: rgba(28, 28, 48, 0.9);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Acid Rain: Effects on Earth's Systems</h1>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section>
+            <h2>What is Acid Rain?</h2>
+            <p>Acid rain is precipitation that has been made acidic by atmospheric pollution, primarily due to sulfur dioxide (SO₂) and nitrogen oxides (NOx). These pollutants originate from industrial processes, vehicle emissions, and other sources.</p>
+            <p>Acid rain can have serious environmental consequences, affecting not only the natural environment but also human health and infrastructure.</p>
+        </section>
+
+        <!-- Effects on Earth's Systems Section -->
+        <section>
+            <h2>Effects of Acid Rain</h2>
+
+            <div class="impact">
+                <h3><i class="fas fa-cloud-rain"></i> Impact on Air Quality</h3>
+                <p>The presence of acid rain can lead to the deterioration of air quality, causing respiratory issues for humans and animals alike. This can create a cycle where poor air quality contributes to further acid rain.</p>
+                <p class="connection"><strong>Result:</strong> Increased respiratory diseases lead to higher healthcare costs and reduced quality of life.</p>
+                <p><strong>Reference:</strong> For more detailed information on air quality and its impacts, visit <a href="https://www.youtube.com/embed/ieaOIiPz0TA?si=mADwghRFHdRDNlzP" target="_blank" style="color: #00aaff;">Air Quality Information</a>.</p>
+            </div>
+
+            <div class="impact">
+                <h3><i class="fas fa-water"></i> Impact on Water Bodies</h3>
+                <p>When acid rain enters rivers, lakes, and streams, it decreases the pH level, harming aquatic life. Species such as fish and amphibians struggle to survive, leading to population declines and biodiversity loss.</p>
+                <p class="connection"><strong>Result:</strong> Declining fish populations disrupt local ecosystems and the economies reliant on fishing.</p>
+                <p><strong>Reference:</strong> Example of impact on water bodies-, visit <a href="https://www.youtube.com/embed/rQhSM2OvnlE?si=dALgCOd8uo6HLjip" target="_blank" style="color: #00aaff;">impact on water bodies</a>.</p>
+            </div>
+
+            <div class="impact">
+                <h3><i class="fas fa-mountain"></i> Impact on Soil</h3>
+                <p>The acidification process accelerates the weathering of rocks and minerals, leading to soil degradation. This degradation reduces nutrient availability for plants, which affects agricultural productivity and food security.</p>
+                <p class="connection"><strong>Result:</strong> Lower agricultural yields can lead to food shortages and increased prices, straining communities.</p>
+            </div>
+
+            <div class="impact">
+                <h3><i class="fas fa-leaf"></i> Impact on Plant Life</h3>
+                <p>Plants are particularly susceptible to the effects of acid rain, as damage to leaves can limit photosynthesis and growth. Additionally, leaching of essential nutrients from the soil further harms plant health.</p>
+                <p class="connection"><strong>Result:</strong> Loss of plant diversity can destabilize ecosystems, affecting their resilience to environmental changes.</p>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section>
+            <h2>Conclusion</h2>
+            <p>Acid rain is a significant environmental challenge that impacts multiple systems of the Earth. To protect our planet, it is crucial to address the sources of acid rain and its cascading effects on air quality, water bodies, soil, and plant life.</p>
+            <p>By reducing emissions of sulfur dioxide and nitrogen oxides, we can work towards a healthier environment for future generations.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Acid Rain Awareness. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmospheric Composition: Comparison with Earth's Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family:'Comic Neue', cursive;
+            background: url('https://c.pxhere.com/photos/c2/4b/blue_sky_clouds_flying_HD_wallpaper_over_the_clouds_sky-911793.jpg!d') center/cover no-repeat;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        header {
+            background: rgba(0, 26, 46, 0.9);
+            padding: 1.5rem;
+            text-align: center;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            z-index: 10;
+            animation: bounce 1s infinite;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        section {
+            margin-top: 40px;
+            background: rgba(0, 26, 46, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+            transition: transform 0.2s;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: slideIn 0.5s forwards;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        section .impact {
+            margin-top: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        section .impact:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        section .connection {
+            margin-top: 10px;
+            font-style: italic;
+            color: #aaa;
+        }
+
+        footer {
+            background: rgba(28, 28, 48, 0.9);
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Atmospheric Composition: Comparison with Earth's Systems</h1>
+    </header>
+
+    <main>
+        <!-- Introduction Section -->
+        <section>
+            <h2>What is Atmospheric Composition?</h2>
+            <p>The atmospheric composition refers to the mixture of gases that make up the Earth's atmosphere. This includes essential gases like nitrogen, oxygen, carbon dioxide, and trace gases. The balance of these gases is crucial for maintaining the Earth's climate and supporting life.</p>
+        </section>
+
+        <!-- Comparison with Earth's Systems Section -->
+        <section>
+            <h2>Atmospheric Composition and Earth's Systems</h2>
+
+            <div class="impact">
+                <h3><i class="fas fa-cloud"></i> The Air We Breathe</h3>
+                <p>The atmosphere is primarily composed of nitrogen (78%) and oxygen (21%), along with trace gases. These gases are vital for life, influencing weather patterns and climate.</p>
+                <p class="connection"><strong>Connection:</strong> Changes in atmospheric composition, such as increased CO₂, directly affect climate change and weather patterns.</p>
+            </div>
+
+            <div class="impact">
+                <h3><i class="fas fa-water"></i> Water and its Interactions</h3>
+                <p>Atmospheric gases interact with water bodies, affecting the pH and temperature of oceans and rivers. Carbon dioxide dissolves in water, leading to ocean acidification.</p>
+                <p class="connection"><strong>Connection:</strong> The quality of air above plays a significant role in the water cycle and influences precipitation patterns.</p>
+            </div>
+
+            <div class="impact">
+                <h3><i class="fas fa-mountain"></i> The Ground Beneath Us</h3>
+                <p>Weathering of rocks is influenced by atmospheric conditions. The composition of rain (often altered by air pollutants) can accelerate soil erosion and nutrient loss.</p>
+                <p class="connection"><strong>Connection:</strong> Variations in atmospheric gases affect soil quality and stability, influencing agriculture and land use.</p>
+            </div>
+
+            <div class="impact">
+                <h3><i class="fas fa-leaf"></i> Life on Land and in Water</h3>
+                <p>The atmosphere provides essential gases for photosynthesis and respiration. Changes in atmospheric composition, such as increased greenhouse gases, impact ecosystems and biodiversity.</p>
+                <p class="connection"><strong>Connection:</strong> The health of ecosystems is directly linked to the quality of the air, affecting plant and animal life.</p>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section>
+            <h2>Conclusion</h2>
+            <p>The composition of the atmosphere is crucial for the health of Earth's systems. Understanding how atmospheric gases interact with various components of the planet is essential for addressing environmental challenges.</p>
+            <p>Efforts to monitor and manage atmospheric composition can lead to a more sustainable and healthy planet.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Atmospheric Awareness. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
